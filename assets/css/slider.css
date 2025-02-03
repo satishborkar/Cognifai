@@ -1,0 +1,185 @@
+.homepage-slider {
+  width: 100%;
+}
+.homepage-slider .hero-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.homepage-slider .tabs input {
+  visibility: hidden;
+  display: none;
+}
+
+.homepage-slider .buttons {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+
+.homepage-slider .buttons label {
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(to right, #1abc9c, #3498db);
+  background-size: 200% 200%;
+  animation: gradientButton 4s ease infinite;
+  /* background: #fff; */
+  opacity: 0.5;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.homepage-slider .tabs input:nth-child(1):checked ~ .buttons label:nth-child(1),
+.homepage-slider .tabs input:nth-child(2):checked ~ .buttons label:nth-child(2),
+.homepage-slider
+  .tabs
+  input:nth-child(3):checked
+  ~ .buttons
+  label:nth-child(3) {
+  opacity: 1;
+  width: 50px;
+}
+
+.homepage-slider .content {
+  position: relative;
+  width: 300vw;
+  display: flex;
+  transition: 0.5s;
+}
+
+.homepage-slider .content .box {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* user-select: none; */
+}
+
+.homepage-slider .content .box.coreAi {
+  background: url("../img/hero/header-004.png") center center no-repeat;
+  background-size: cover;
+}
+
+.homepage-slider .content .box.machineLearning {
+  background: url("../img/hero/header-002.png") center center no-repeat;
+  background-size: cover;
+}
+
+.homepage-slider .content .box.deepLearning {
+  background: url("../img/hero/header-005.png") center center no-repeat;
+  background-size: cover;
+}
+
+.homepage-slider .content .box .overlay {
+  background-color: rgba(0, 0, 0, 0.65);
+  /* background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(79, 17, 17, 1)); */
+  /* background-size: 200% 200%;
+  animation: color-change 4s ease infinite; */
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* user-select: none; */
+  padding: 40px;
+  z-index: 1;
+}
+
+.homepage-slider .tabs input:nth-child(1):checked ~ .content {
+  left: 0;
+}
+
+.homepage-slider .tabs input:nth-child(2):checked ~ .content {
+  left: -100vw;
+}
+
+.homepage-slider .tabs input:nth-child(3):checked ~ .content {
+  left: -200vw;
+}
+
+.homepage-slider .content .box .contentBx {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.homepage-slider .content .box .contentBx h2 {
+  font-size: 3em;
+  color: #fff;
+  font-family: var(--nav-font);
+  font-weight: 100;
+}
+
+.homepage-slider .content .box .contentBx p {
+  font-size: 1.2em;
+  color: #fff;
+  max-width: 700px;
+  text-align: center;
+  font-family: var(--nav-font);
+  font-weight: 100;
+}
+
+.homepage-slider .content .box .contentBx button {
+  font-size: 0.9em;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px 25px;
+  /* background: #fff; */
+  background: linear-gradient(to right, #1abc9c, #3498db);
+  background-size: 200% 200%;
+  animation: gradientButton 4s ease infinite;
+  color: #fff;
+  letter-spacing: 0.05em;
+  margin-top: 10px;
+  font-weight: 600;
+  border: none;
+  border-radius: 40px;
+  transition: 0.5s;
+  font-family: var(--nav-font);
+  font-weight: 200;
+}
+
+.homepage-slider .content .box .contentBx button:hover {
+  letter-spacing: 0.2em;
+}
+
+@keyframes gradientButton {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes color-change {
+  0% {
+    background-color: rgba(0, 0, 0, 0.5);
+    background-position: 0% 50%;
+  }
+  50% {
+    background-color: rgba(79, 17, 17, 0.5);
+    background-position: 100% 50%;
+  }
+  100% {
+    background-color: rgb(37, 21, 21, 0.5);
+    background-position: 0% 50%;
+  }
+}
