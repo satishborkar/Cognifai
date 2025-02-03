@@ -1,2 +1,3 @@
 # Cognifai
-Cognifai - AI adaption website
+
+Cognifai - AI adaption website.
