@@ -957,16 +957,24 @@ section,
 .services .service-item {
   background-color: var(--surface-color);
   box-shadow: 0px 5px 90px 0px rgba(0, 0, 0, 0.1);
-  padding: 60px 30px;
+  padding: 30px 30px 60px 30px;
   transition: all ease-in-out 0.3s;
   border-radius: 18px;
   border-bottom: 5px solid var(--surface-color);
   height: 100%;
+  background: url(../img/svg/drop.png) right bottom no-repeat;
+}
+
+.services .service-item:nth-child(2) {
+  background: url(../img/svg/drop.png) left bottom no-repeat;
 }
 
 .services .service-item .icon {
   color: var(--contrast-color);
   background: var(--accent-color);
+  background: linear-gradient(to right, #1abc9c, #3498db);
+  background-size: 200% 200%;
+  animation: gradientButton 4s ease infinite;
   margin: 0;
   width: 64px;
   height: 64px;
@@ -977,13 +985,15 @@ section,
   margin-bottom: 20px;
   font-size: 28px;
   transition: ease-in-out 0.3s;
+  margin-right: 15px;
 }
 
 .services .service-item h3 {
-  font-weight: 700;
+  font-weight: 400;
   margin: 10px 0 15px 0;
   font-size: 22px;
   transition: ease-in-out 0.3s;
+  font-family: var(--nav-font);
 }
 
 .services .service-item p {
