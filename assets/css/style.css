@@ -1,0 +1,51 @@
+.paragraph {
+  padding-bottom: 25px;
+}
+
+.running-font {
+  font-size: 1.2em;
+  font-family: var(--nav-font);
+  font-weight: 200;
+}
+
+.service-item p {
+  padding-bottom: 15px;
+}
+
+.font-bold {
+  font-weight: 600;
+}
+
+.shaped-images-slice {
+  position: relative;
+  width: 400px;
+  height: 450px;
+}
+
+.shaped-images-slice img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: 15% 15%;
+}
+
+.shaped-images-slice img:nth-child(1) {
+  transform: rotate(-5deg);
+}
+
+.shaped-images-slice img:nth-child(2) {
+  transform: rotate(-10deg);
+}
+
+.shaped-images-slice img:nth-child(3) {
+  transform: rotate(-15deg);
+}
+
+.shaped-images-slice img:nth-child(4) {
+  transform: rotate(-20deg);
+}
+
+.flex-row {
+  display: flex;
+  align-items: center;
+}
