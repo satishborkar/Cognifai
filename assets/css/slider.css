@@ -133,7 +133,8 @@
   font-weight: 100;
 }
 
-.homepage-slider .content .box .contentBx button {
+.homepage-slider .content .box .contentBx button,
+.std-btn {
   font-size: 0.9em;
   text-decoration: none;
   text-transform: uppercase;
@@ -153,7 +154,9 @@
   font-weight: 200;
 }
 
-.homepage-slider .content .box .contentBx button:hover {
+.homepage-slider .content .box .contentBx button:hover,
+.std-btn:hover,
+.std-btn:focus {
   letter-spacing: 0.2em;
 }
 

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Ephesis&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,300;1,300&display=swap");
+
 .paragraph {
   padding-bottom: 25px;
 }
@@ -6,6 +8,22 @@
   font-size: 1.2em;
   font-family: var(--nav-font);
   font-weight: 200;
+}
+
+.light-font {
+  font-family: var(--nav-font);
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.ephesis-regular {
+  font-family: var(--running-font);
+  font-weight: 400;
+  font-style: normal;
+}
+
+.heading-running-font {
+  font-size: 70px !important;
 }
 
 .service-item p {
@@ -27,6 +45,7 @@
   left: 0;
   top: 0;
   transform-origin: 15% 15%;
+  transition: all ease-in 200ms;
 }
 
 .shaped-images-slice img:nth-child(1) {
@@ -45,7 +64,20 @@
   transform: rotate(-20deg);
 }
 
+.shaped-images-slice img:hover {
+  transform: rotate(-10deg);
+  filter: grayscale(1);
+}
+
+.shaped-images-slice:hover img.svg {
+  opacity: 0.5;
+}
+
 .flex-row {
   display: flex;
   align-items: center;
+}
+
+.blurr-img {
+  filter: blur(5px);
 }
