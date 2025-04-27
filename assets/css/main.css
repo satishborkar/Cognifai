@@ -244,6 +244,11 @@ h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
   font-weight: 400;
+  padding: 15px;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
 }
 
 .header .logo h1 span.gradient {
@@ -266,10 +271,10 @@ h6 {
   font-size: 12px;
   width: 100%;
   text-align: right;
-  opacity: 0.8;
+  /* opacity: 0.8; */
   font-family: var(--heading-font);
-  font-weight: 100;
-  padding-top: 5px;
+  font-weight: 300;
+  /* padding-top: 5px; */
 
   /* background: linear-gradient(to right, hsl(98 100% 62%), hsl(204 100% 59%));
   background-size: 400% 400%;
@@ -1062,7 +1067,8 @@ section,
   color: var(--default-color);
 }
 
-.call-to-action .cta-btn {
+.call-to-action .cta-btn,
+.link-btn {
   font-family: var(--running-font);
   font-weight: 500;
   font-size: 30px;
@@ -1074,6 +1080,21 @@ section,
   margin: 10px;
   background: linear-gradient(to right, #1abc9c, #3498db);
   color: var(--contrast-color);
+}
+
+.link-btn {
+  font-family: var(--nav-font);
+  letter-spacing: 0.05em;
+  font-size: 0.9em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 200;
+}
+
+.link-btn:hover,
+.link-btn:focus {
+  letter-spacing: 5px;
+  color: #fff;
 }
 
 .call-to-action .cta-btn:hover {
@@ -1122,10 +1143,8 @@ section,
 # Clients Section
 --------------------------------------------------------------*/
 .clients .clients-wrap {
-  border-top: 1px solid
-    color-mix(in srgb, var(--default-color), transparent 85%);
-  border-left: 1px solid
-    color-mix(in srgb, var(--default-color), transparent 85%);
+  display: flex;
+  justify-content: center;
 }
 
 .clients .client-logo {
@@ -1133,66 +1152,43 @@ section,
   display: flex;
   justify-content: center;
   align-items: center;
-  border-right: 1px solid
+  /* border-right: 1px solid
     color-mix(in srgb, var(--default-color), transparent 85%);
   border-bottom: 1px solid
-    color-mix(in srgb, var(--default-color), transparent 85%);
+    color-mix(in srgb, var(--default-color), transparent 85%); */
   overflow: hidden;
   min-height: 160px;
-  font-size: 1em;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 15px 15px 0 0;
+  box-shadow: 0 0 5px rgba(75, 75, 75, 0.07);
+  background-color: #fff;
+  padding: 15px;
+  border: 1px solid #ccc;
+}
+
+.client-logo .bg-part {
+  width: 100%;
+  height: auto;
+  margin-bottom: 5px;
+}
+
+.client-logo .bg-part img {
+  width: 100%;
+}
+
+.client-logo h2 {
+  font-size: 18px;
+  padding-bottom: 5px;
+  margin: 10px 0;
+}
+
+.client-logo p {
+  font-size: 12px;
   font-family: var(--nav-font);
-  font-weight: 200;
-  transition: 0.3s;
-  color: var(--heading-color);
+  font-weight: 300;
 }
-
-/* .clients .client-logo:hover {
-  filter: hue-rotate(90deg);
-} */
-
-.clients .client-logo p {
-  transition: 0.3s;
-}
-
-.clients .client-logo:hover p {
-  transform: scale(1.5);
-}
-
-/* .clients .client-logo:nth-child(1),
-.clients .client-logo:nth-child(9) {
-  background-color: #5ba525;
-}
-
-.clients .client-logo:nth-child(2),
-.clients .client-logo:nth-child(10) {
-  background-color: #40a800;
-}
-
-.clients .client-logo:nth-child(3),
-.clients .client-logo:nth-child(11) {
-  background-color: #16a61e;
-}
-
-.clients .client-logo:nth-child(4),
-.clients .client-logo:nth-child(12) {
-  background-color: #00a478;
-}
-
-.clients .client-logo:nth-child(5) {
-  background-color: #00a478;
-}
-
-.clients .client-logo:nth-child(6) {
-  background-color: #16a61e;
-}
-
-.clients .client-logo:nth-child(7) {
-  background-color: #40a800;
-}
-
-.clients .client-logo:nth-child(8) {
-  background-color: #5ba525;
-} */
 
 /*--------------------------------------------------------------
 # Stats Section

@@ -6,15 +6,33 @@
    * Auto click hero container
    * ***/
 
-  function autoClickHeroContainer() {
-    const list = ["dance", "travel", "photography"];
+  // function autoClickHeroContainer() {
+  //   const list = ["dance", "travel", "photography"];
 
-    for (let i = 0; i < list.length; i++) {
-      console.log("Hero Container", list[i]);
-    }
+  //   for (let i = 0; i < list.length; i++) {
+  //     console.log("Hero Container", list[i]);
+  //   }
+  // }
+
+  // autoClickHeroContainer();
+
+  function cycleRadioButtons() {
+    const radios = document.querySelectorAll('.tabs input[type="radio"]');
+    if (radios.length === 0) return;
+
+    let currentIndex = 0;
+
+    // Initially select the first radio button
+    radios[currentIndex].checked = true;
+
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % radios.length; // Loop back to start
+      radios[currentIndex].checked = true;
+    }, 5000); // 5 seconds = 5000 milliseconds
   }
 
-  autoClickHeroContainer();
+  // Call the function to start cycling
+  cycleRadioButtons();
 
   /**
    * Apply .scrolled class to the body as the page is scrolled down
