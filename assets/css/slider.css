@@ -67,19 +67,26 @@
 }
 
 .homepage-slider .content .box.coreAi {
-  background: url("../img/hero/header-004.png") center center no-repeat;
+  background: url("../img/headers/A-Adoption.webp") center center no-repeat;
+  background-size: cover;
+}
+
+.homepage-slider .content .box.cloudTransformation {
+  background: url("../img/headers/Cloud-Transformation.webp") center center
+    no-repeat;
   background-size: cover;
 }
 
 .homepage-slider .content .box.machineLearning {
-  background: url("../img/hero/header-002.png") center center no-repeat;
+  background: url("../img/headers/Digital-Transformation.webp") center center
+    no-repeat;
   background-size: cover;
 }
 
-.homepage-slider .content .box.deepLearning {
+/* .homepage-slider .content .box.deepLearning {
   background: url("../img/hero/header-005.png") center center no-repeat;
   background-size: cover;
-}
+} */
 
 .homepage-slider .content .box .overlay {
   background-color: rgba(0, 0, 0, 0.65);
