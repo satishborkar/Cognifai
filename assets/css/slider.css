@@ -40,18 +40,20 @@
 
 .homepage-slider .tabs input:nth-child(1):checked ~ .buttons label:nth-child(1),
 .homepage-slider .tabs input:nth-child(2):checked ~ .buttons label:nth-child(2),
+.homepage-slider .tabs input:nth-child(3):checked ~ .buttons label:nth-child(3),
+.homepage-slider .tabs input:nth-child(4):checked ~ .buttons label:nth-child(4),
 .homepage-slider
   .tabs
-  input:nth-child(3):checked
+  input:nth-child(5):checked
   ~ .buttons
-  label:nth-child(3) {
+  label:nth-child(5) {
   opacity: 1;
   width: 50px;
 }
 
 .homepage-slider .content {
   position: relative;
-  width: 300vw;
+  width: 500vw;
   display: flex;
   transition: 0.5s;
 }
@@ -83,10 +85,17 @@
   background-size: cover;
 }
 
-/* .homepage-slider .content .box.deepLearning {
-  background: url("../img/hero/header-005.png") center center no-repeat;
+.homepage-slider .content .box.deepLearning {
+  background: url("../img/headers/Quality-Engineering-Transformation2.webp")
+    center center no-repeat;
   background-size: cover;
-} */
+}
+
+.homepage-slider .content .box.businessProcessAutomation {
+  background: url("../img/headers/Business-Process-Automation.webp") center
+    center no-repeat;
+  background-size: cover;
+}
 
 .homepage-slider .content .box .overlay {
   background-color: rgba(0, 0, 0, 0.65);
@@ -114,6 +123,14 @@
 
 .homepage-slider .tabs input:nth-child(3):checked ~ .content {
   left: -200vw;
+}
+
+.homepage-slider .tabs input:nth-child(4):checked ~ .content {
+  left: -300vw;
+}
+
+.homepage-slider .tabs input:nth-child(5):checked ~ .content {
+  left: -400vw;
 }
 
 .homepage-slider .content .box .contentBx {
